@@ -5461,22 +5461,27 @@
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 100,
-                speed: 1800,
+                speed: 1500,
                 grabCursor: true,
                 loop: true,
                 watchOverflow: true,
                 preloadImages: false,
                 lazy: true,
                 parallax: true,
-                coverflowEffect: {
-                    modifier: 1,
-                    depth: 1e3,
-                    scale: .1,
-                    stretch: "50",
-                    rotate: 60,
-                    slideShadows: true
+                lazy: {
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1,
+                    loadOnTransitionStart: true
                 },
                 effect: "coverflow",
+                coverflowEffect: {
+                    modifier: 1,
+                    depth: 5500,
+                    scale: 1,
+                    stretch: "350",
+                    rotate: 90,
+                    slideShadows: true
+                },
                 autoplay: {
                     delay: 4e3,
                     disableOnInteraction: false,
@@ -5499,17 +5504,23 @@
                 on: {}
             });
             if (document.querySelector(".daily__slider")) new core(".daily__slider", {
-                modules: [ Navigation, Autoplay, Lazy ],
+                modules: [ Navigation, Autoplay, Lazy, Parallax ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 100,
-                speed: 1800,
+                speed: 500,
                 grabCursor: true,
                 loop: true,
                 watchOverflow: true,
                 preloadImages: false,
                 lazy: true,
+                parallax: true,
+                lazy: {
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1,
+                    loadOnTransitionStart: true
+                },
                 autoplay: {
                     delay: 4e3,
                     disableOnInteraction: false,

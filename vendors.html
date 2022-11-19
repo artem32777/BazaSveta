@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221118050505">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221120035704">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header data-scroll="200" data-scroll-show="1000" class="header">
+		<header data-scroll="150" data-scroll-show="1000" class="header">
 			<menu class="header__container_top">
 				<nav class="header__top header-top">
 					<div data-da=".popup__geo,1150" class="header-top__location">
@@ -29,7 +29,7 @@
 						<time class="header-top__time">Пн-Пт: с 09:00-18:00</time>
 					</div>
 					<ul class="header-top__menu">
-						<li class="header-top__item"><a href="#" class="header-top__link">Сборка электрощитков</a></li>
+						<li class="header-top__item"><a href="electros.html" class="header-top__link">Сборка электрощитков</a></li>
 						<li class="header-top__item"><a href="brands.html" class="header-top__link">Производители</a></li>
 						<li class="header-top__item header-top__delivery">
 							<select data-pseudo-label="Оплата и Доставка" data-speed="500" name="form[]" class="form">
@@ -71,8 +71,8 @@
 			<menu class="header__container_bottom">
 				<nav class="header__bottom header-bottom">
 					<a class="header-bottom__logos" href="index.html">
-						<img class="header-bottom__logo" src="img/logo.svg" alt="Логотип компании">
-						<img class="header-bottom__logoshort" src="img/logoshort.svg" alt="Логотип компании">
+						<img class="header-bottom__logo" data-src="img/logo.svg" alt="Логотип компании">
+						<img class="header-bottom__logoshort" data-src="img/logoshort.svg" alt="Логотип компании">
 					</a>
 					<div class="header-bottom__catalog-btn btn-3">
 						<button type="button" class="icon-catalog">
@@ -115,7 +115,7 @@
 
 
 		<main class="page page-vendors">
-			<section data-tabs data-tabs-animate="300" class="catalog tabs">
+			<section data-tabs data-tabs-animate="500" class="catalog tabs">
 				<nav data-tabs-titles class="catalog__menu tabs__navigation">
 					<button type="button" class="catalog__title tabs__title _tab-active">Кабели и провода</button>
 					<button type="button" class="catalog__title tabs__title">Светильники</button>
@@ -2291,94 +2291,116 @@
 					</div>
 				</section>
 				<section class="page-vendors__slider mb">
-					<div class="goods-sl sl mb">
-						<span class="sl-span">
-							<h2 class="goods-sl__title">Рекомендуемые товары</h2>
-							<a href="#" class="goods-sl__link _icon-ar">Рекомендуемые товары</a>
-						</span>
-						<div class="goods-sl__arrow sl-arrow _icon-bigar"></div>
-						<div class="goods-sl__goods-sl sl-sw swiper">
-							<div class="goods-sl__wrapper swiper-wrapper">
-								<article class="goods-sl__slide swiper-slide">
-									<div class="goods-sl__content">
-										<span>
-											<div class="goods-sl__sticker btn-1">Хит продаж</div>
-											<div class="goods-sl__likes">
-												<button type="button" class="goods-sl__like sl-like _icon-like"></button>
-												<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+					<div class="goods-sl mb">
+						<nav class="title-nav">
+							<h2 class="title-nav__title">Товары</h2>
+							<select data-speed="500" data-pseudo-label="Выбрать категорию" name="form[3]" class="form">
+								<option value="1">Кабели и провода</option>
+								<option value="2">Светильники</option>
+								<option value="3">Лампы</option>
+								<option value="4">Электроустановочные изделия</option>
+								<option value="4">Кабеленесущие системы</option>
+								<option value="4">Бытовая техника крупная</option>
+							</select>
+
+							<!-- <div data-spollers data-one-spoller class="title-nav__spollers">
+    <button type="button" data-spoller class="title-nav__subtitle _icon-ar">Выбрать категорию</button>
+    <div class="title-nav__body">
+      <button type="button" class="title-nav__btn">Кабели и провода</button>
+      <button type="button" class="title-nav__btn">Светильники</button>
+      <button type="button" class="title-nav__btn">Лампы</button>
+      <button type="button" class="title-nav__btn">Электроустановочные изделия</button>
+      <button type="button" class="title-nav__btn">Кабеленесущие системы</button>
+      <button type="button" class="title-nav__btn">Бытовая техника крупная</button>
+  </div> -->
+						</nav>
+
+
+						<div class="goods-sl__body sl">
+							<div class="goods-sl__arrow sl-arrow _icon-bigar"></div>
+							<div class="goods-sl__goods-sl sl-sw swiper">
+								<div class="goods-sl__wrapper swiper-wrapper">
+									<article class="goods-sl__slide swiper-slide">
+										<div class="goods-sl__content">
+											<span>
+												<div class="goods-sl__sticker btn-1">Хит продаж</div>
+												<div class="goods-sl__likes">
+													<button type="button" class="goods-sl__like sl-like _icon-like"></button>
+													<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+												</div>
+											</span>
+											<a href="#" class="goods-sl__image-ibc">
+												<picture><source data-srcset="img/products/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/products/1.jpg" alt="Изображение товара"></picture>
+											</a>
+											<h2 class="goods-sl__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h2>
+											<div class="goods-sl__info m-txt">Есть в наличии: <span>303 шт</span></div>
+											<div class="goods-sl__buy">
+												<div class="goods-sl__price"><span>51,55</span>₽/м</div>
+												<button type="button" class="goods-sl__btn _icon-basket"></button>
 											</div>
-										</span>
-										<a href="#" class="goods-sl__image-ibc">
-											<picture><source data-srcset="img/products/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/products/1.jpg" alt="Изображение товара"></picture>
-										</a>
-										<h2 class="goods-sl__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h2>
-										<div class="goods-sl__info m-txt">Есть в наличии: <span>303 шт</span></div>
-										<div class="goods-sl__buy">
-											<div class="goods-sl__price"><span>51,55</span>₽/м</div>
-											<button type="button" class="goods-sl__btn _icon-basket"></button>
 										</div>
-									</div>
-								</article>
-								<article class="goods-sl__slide swiper-slide">
-									<div class="goods-sl__content">
-										<span>
-											<div class="goods-sl__sticker btn-1">Хит продаж</div>
-											<div class="goods-sl__likes">
-												<button type="button" class="goods-sl__like sl-like _icon-like"></button>
-												<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+									</article>
+									<article class="goods-sl__slide swiper-slide">
+										<div class="goods-sl__content">
+											<span>
+												<div class="goods-sl__sticker btn-1">Хит продаж</div>
+												<div class="goods-sl__likes">
+													<button type="button" class="goods-sl__like sl-like _icon-like"></button>
+													<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+												</div>
+											</span>
+											<a href="#" class="goods-sl__image-ibc">
+												<picture><source data-srcset="img/products/2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/products/2.jpg" alt="Изображение товара"></picture>
+											</a>
+											<h2 class="goods-sl__name">Лампа 2х2,5 ГОСТ СКЗ</h2>
+											<div class="goods-sl__info m-txt">Есть в наличии: <span>50 шт</span></div>
+											<div class="goods-sl__buy">
+												<div class="goods-sl__price"><span>1351,55</span>₽/м</div>
+												<button type="button" class="goods-sl__btn _icon-basket"></button>
 											</div>
-										</span>
-										<a href="#" class="goods-sl__image-ibc">
-											<picture><source data-srcset="img/products/2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/products/2.jpg" alt="Изображение товара"></picture>
-										</a>
-										<h2 class="goods-sl__name">Лампа 2х2,5 ГОСТ СКЗ</h2>
-										<div class="goods-sl__info m-txt">Есть в наличии: <span>50 шт</span></div>
-										<div class="goods-sl__buy">
-											<div class="goods-sl__price"><span>1351,55</span>₽/м</div>
-											<button type="button" class="goods-sl__btn _icon-basket"></button>
 										</div>
-									</div>
-								</article>
-								<article class="goods-sl__slide swiper-slide">
-									<div class="goods-sl__content">
-										<span>
-											<div class="goods-sl__sticker btn-1">Хит продаж</div>
-											<div class="goods-sl__likes">
-												<button type="button" class="goods-sl__like sl-like _icon-like"></button>
-												<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+									</article>
+									<article class="goods-sl__slide swiper-slide">
+										<div class="goods-sl__content">
+											<span>
+												<div class="goods-sl__sticker btn-1">Хит продаж</div>
+												<div class="goods-sl__likes">
+													<button type="button" class="goods-sl__like sl-like _icon-like"></button>
+													<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+												</div>
+											</span>
+											<a href="#" class="goods-sl__image-ibc">
+												<picture><source data-srcset="img/home/block-1/2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/home/block-1/2.jpg" alt="Изображение товара"></picture>
+											</a>
+											<h2 class="goods-sl__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h2>
+											<div class="goods-sl__info m-txt">Есть в наличии: <span>303 шт</span></div>
+											<div class="goods-sl__buy">
+												<div class="goods-sl__price"><span>51,55</span>₽/м</div>
+												<button type="button" class="goods-sl__btn _icon-basket"></button>
 											</div>
-										</span>
-										<a href="#" class="goods-sl__image-ibc">
-											<picture><source data-srcset="img/home/block-1/2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/home/block-1/2.jpg" alt="Изображение товара"></picture>
-										</a>
-										<h2 class="goods-sl__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h2>
-										<div class="goods-sl__info m-txt">Есть в наличии: <span>303 шт</span></div>
-										<div class="goods-sl__buy">
-											<div class="goods-sl__price"><span>51,55</span>₽/м</div>
-											<button type="button" class="goods-sl__btn _icon-basket"></button>
 										</div>
-									</div>
-								</article>
-								<article class="goods-sl__slide swiper-slide">
-									<div class="goods-sl__content">
-										<span>
-											<div class="goods-sl__sticker btn-1">Хит продаж</div>
-											<div class="goods-sl__likes">
-												<button type="button" class="goods-sl__like sl-like _icon-like"></button>
-												<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+									</article>
+									<article class="goods-sl__slide swiper-slide">
+										<div class="goods-sl__content">
+											<span>
+												<div class="goods-sl__sticker btn-1">Хит продаж</div>
+												<div class="goods-sl__likes">
+													<button type="button" class="goods-sl__like sl-like _icon-like"></button>
+													<button hidden type="button" class="goods-sl__like sl-like _icon-likefull"></button>
+												</div>
+											</span>
+											<a href="#" class="goods-sl__image-ibc">
+												<picture><source data-srcset="img/stock/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/stock/1.jpg" alt="Изображение товара"></picture>
+											</a>
+											<h2 class="goods-sl__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h2>
+											<div class="goods-sl__info m-txt">Есть в наличии: <span>303 шт</span></div>
+											<div class="goods-sl__buy">
+												<div class="goods-sl__price"><span>51,55</span>₽/м</div>
+												<button type="button" class="goods-sl__btn _icon-basket"></button>
 											</div>
-										</span>
-										<a href="#" class="goods-sl__image-ibc">
-											<picture><source data-srcset="img/stock/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="swiper-lazy" data-src="img/stock/1.jpg" alt="Изображение товара"></picture>
-										</a>
-										<h2 class="goods-sl__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h2>
-										<div class="goods-sl__info m-txt">Есть в наличии: <span>303 шт</span></div>
-										<div class="goods-sl__buy">
-											<div class="goods-sl__price"><span>51,55</span>₽/м</div>
-											<button type="button" class="goods-sl__btn _icon-basket"></button>
 										</div>
-									</div>
-								</article>
+									</article>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -2417,7 +2439,7 @@
 					<h2 class="vendors-about__title h2">Поставщики о работе с нами</h2>
 					<div class="video-block">
 						<div data-watch class="video-block__content">
-							<img class="video-block__logo" src="img/logo.svg" alt="Логотип компании">
+							<img class="video-block__logo" data-src="img/logo.svg" alt="Логотип компании">
 							<p class="video-block__label">“Первоклассный сервис для наших клиентов по всей России”</p>
 							<div class="video-block__text">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar.</p>
@@ -2458,7 +2480,7 @@
 					<div class="footer-top__image-ibg"><picture><source data-srcset="img/map.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/map.jpg" alt="Карта"></picture></div>
 				</section>
 				<section class="footer__bottom footer-bottom">
-					<a href="home" class="footer-bottom__logo"><img src="img/logowhite.svg" alt="Логотип компании"></a>
+					<a href="home" class="footer-bottom__logo"><img data-src="img/logowhite.svg" alt="Логотип компании"></a>
 					<ul class="footer-bottom__content">
 						<li class="footer-bottom__column">
 							<ul class="footer-bottom__list">
@@ -2521,7 +2543,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20221118050505"></script>
+	<script src="js/app.min.js?_v=20221120035704"></script>
 </body>
 
 </html>
