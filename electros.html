@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221120192221">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221122040235">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,7 +102,7 @@
 						<a href="favorite.html" class="header-bottom__favorites header-bottom__action _icon-like">
 							<div>1</div>
 						</a>
-						<a href="#" class="header-bottom__basket header-bottom__action _icon-basket">
+						<a href="basket.html" class="header-bottom__basket header-bottom__action _icon-basket">
 							<div>2</div>
 						</a>
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
@@ -133,7 +133,7 @@
 					<button type="button" class="catalog__title tabs__title">Системы распределения высокого напряжения</button>
 					<button type="button" class="catalog__title tabs__title">Линии электропередач (ЛЭП)</button>
 					<button type="button" class="catalog__title tabs__title">Устройства безопасности</button>
-					<a href="#" class="catalog__title catalog__viewall _icon-upar">Все категории</a>
+					<a href="catalogs.html" class="catalog__title catalog__viewall _icon-upar">Все категории</a>
 				</nav>
 				<div data-tabs-body class="catalog__content tabs__content">
 					<div class="tabs__body">
@@ -2212,7 +2212,7 @@
 								</ul>
 							</li>
 							<li class="subcatalog__item">
-								<a href="#" class="catalog__viewall subcatalog__allgroups  _icon-upar">Все группы</a>
+								<a href="categories.html" class="catalog__viewall subcatalog__allgroups  _icon-upar">Все группы</a>
 							</li>
 						</ul>
 					</div>
@@ -2246,7 +2246,7 @@
 					<li class="catalog-mini__item"><a href="#" class="catalog-mini__link">Электрические распределительные системы</a></li>
 					<li class="catalog-mini__item"><a href="#" class="catalog-mini__link">Бытовая техника крупная</a></li>
 				</ul>
-				<a href="#" class="catalog-mini__viewall _icon-ar">Показать все категории</a>
+				<a href="catalogs.html" class="catalog-mini__viewall _icon-ar">Показать все категории</a>
 			</nav>
 			<div class="page-electros__container">
 				<nav class="nav">
@@ -2451,16 +2451,47 @@
 						<div class="form-electro__body">
 							<h2 class="form-electro__title">Заказать просчет электрощитового оборудования</h2>
 							<h3 class="form-electro__subtitle">После того, как менеджер получит вашу заявку, с вами свяжутся в течении 10 минут в рабочее время</h3>
-							<form data-dev action="" class="form-electro__form">
+							<form data-dev data-popup-message="#form-electro" action="" class="form-electro__form">
 								<input data-required autocomplete="off" type="text" name="form[]" data-error="" placeholder="Имя" class="form-electro__input">
 								<input data-required data-phone-pattern autocomplete="off" type="text" name="form[]" data-error="" placeholder="Телефон" class="form-electro__input">
-								<label class="form-electro__upload _icon-basket">
+								<label class="form-electro__upload _icon-download">
 									<input autocomplete="off" type="text" name="form[]" data-error="" placeholder="Прикрепите ваше ТЗ (не обязательно)" class="form-electro__input">
 								</label>
 								<button type="submit" class="form-electro__btn btn-3">Получить</button>
 							</form>
 							<p class="form-electro__text">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных *</p>
 						</div>
+					</div>
+				</section>
+				<section class="page-electro__advantages">
+					<div class="advantages2">
+						<h2 class="advantages2__title h2">Наши преимущества</h2>
+						<ul class="advantages2__list">
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Предоставляем паспорта<br> и сертификаты</h3>
+								<div class="advantages2__img _icon-document2"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Отсрочка <br>постоянным покупателям</h3>
+								<div class="advantages2__img _icon-clock2"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Менеджеры <br> на связи 24\7</h3>
+								<div class="advantages2__img _icon-managers2"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Сборка щитов согласно <br> ГОСТ Р 51321.1-2007</h3>
+								<div class="advantages2__img _icon-document3"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Выгодные цены <br>на сборку</h3>
+								<div class="advantages2__img _icon-barrel"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Квалифицированный <br>персонал</h3>
+								<div class="advantages2__img _icon-accept2"></div>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</div>
@@ -2551,8 +2582,17 @@
 		</div>
 	</div>
 
-
-	<script src="js/app.min.js?_v=20221120192221"></script>
+	<div id="form-electro" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					Ваша заявка принята!
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221122040235"></script>
 </body>
 
 </html>

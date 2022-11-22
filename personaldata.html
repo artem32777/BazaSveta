@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221120192221">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221122040235">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,7 +102,7 @@
 						<a href="favorite.html" class="header-bottom__favorites header-bottom__action _icon-like">
 							<div>1</div>
 						</a>
-						<a href="#" class="header-bottom__basket header-bottom__action _icon-basket">
+						<a href="basket.html" class="header-bottom__basket header-bottom__action _icon-basket">
 							<div>2</div>
 						</a>
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
@@ -133,7 +133,7 @@
 					<button type="button" class="catalog__title tabs__title">Системы распределения высокого напряжения</button>
 					<button type="button" class="catalog__title tabs__title">Линии электропередач (ЛЭП)</button>
 					<button type="button" class="catalog__title tabs__title">Устройства безопасности</button>
-					<a href="#" class="catalog__title catalog__viewall _icon-upar">Все категории</a>
+					<a href="catalogs.html" class="catalog__title catalog__viewall _icon-upar">Все категории</a>
 				</nav>
 				<div data-tabs-body class="catalog__content tabs__content">
 					<div class="tabs__body">
@@ -2212,7 +2212,7 @@
 								</ul>
 							</li>
 							<li class="subcatalog__item">
-								<a href="#" class="catalog__viewall subcatalog__allgroups  _icon-upar">Все группы</a>
+								<a href="categories.html" class="catalog__viewall subcatalog__allgroups  _icon-upar">Все группы</a>
 							</li>
 						</ul>
 					</div>
@@ -2246,7 +2246,7 @@
 					<li class="catalog-mini__item"><a href="#" class="catalog-mini__link">Электрические распределительные системы</a></li>
 					<li class="catalog-mini__item"><a href="#" class="catalog-mini__link">Бытовая техника крупная</a></li>
 				</ul>
-				<a href="#" class="catalog-mini__viewall _icon-ar">Показать все категории</a>
+				<a href="catalogs.html" class="catalog-mini__viewall _icon-ar">Показать все категории</a>
 			</nav>
 			<div class="page-personaldata__container">
 				<nav class="nav">
@@ -2372,8 +2372,17 @@
 		</div>
 	</div>
 
-
-	<script src="js/app.min.js?_v=20221120192221"></script>
+	<div id="form-electro" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					Ваша заявка принята!
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221122040235"></script>
 </body>
 
 </html>
