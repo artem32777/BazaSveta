@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Оформление заказа</title>
+	<title>Страница подкатегорий</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -114,7 +114,7 @@
 
 
 
-		<main class="page page-ordering">
+		<main class="page page-categories">
 			<section data-tabs data-tabs-animate="500" class="catalog tabs">
 				<nav data-tabs-titles class="catalog__menu tabs__navigation">
 					<button type="button" class="catalog__title tabs__title _tab-active">Кабели и провода</button>
@@ -2248,7 +2248,7 @@
 				</ul>
 				<a href="catalogs.html" class="catalog-mini__viewall _icon-ar">Показать все категории</a>
 			</nav>
-			<div class="page-ordering__container">
+			<div class="page-categories__container">
 				<nav class="nav">
 					<ul class="nav__list m-txt">
 						<li class="nav__item"><a href="home" class="nav__link">Главная</a></li>
@@ -2256,87 +2256,338 @@
 						<li class="nav__item"><a href="#" class="nav__link">Акция</a></li>
 					</ul>
 				</nav>
-				<section class="page-ordering__main ordering">
-					<h1 class="ordering__title h">Оформление заказа</h1>
-					<form data-dev action="" class="ordering__form">
-						<div class="ordering__content">
-							<div class="ordering__inputs m-txt">
-								<span>1. Укажите данные получателя заказа</span>
-								<input data-required autocomplete="off" type="text" name="form[]" data-error="Укажите имя получателя" placeholder="Имя" class="ordering__input ordering__input_name">
-								<input data-phone-pattern data-required autocomplete="off" type="text" name="form[]" data-error="Укажите телефон получателя" placeholder="+7" class="ordering__input ordering__input_tel">
-								<label class="ordering__another"><input type="checkbox">Заберет другой человек</label>
-							</div>
-							<div class="ordering__delivery">
-								<h3 class="ordering__subtitle">2. Где и как вы хотите получить заказ?</h3>
-								<div class="options">
-									<div class="options__item">
-										<input checked hidden id="o_1" class="options__input" type="radio" value="1" name="option">
-										<label for="o_1" class="options__label">
-											<div class="options__content">
-												<div class="options__img _icon-geo2"></div>
-												<h4 class="options__title">Самовывоз</h4>
-												<p class="options__text m-txt">Послезавтра - бесплатно</p>
-											</div>
-										</label>
-									</div>
-									<div class="options__item">
-										<input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
-										<label for="o_2" class="options__label">
-											<div class="options__content">
-												<div class="options__img _icon-box3"></div>
-												<h4 class="options__title">Доставка курьером</h4>
-												<p class="options__text m-txt">Послезавтра - бесплатно</p>
-											</div>
-										</label>
-									</div>
-									<div class="options__item">
-										<input hidden id="o_3" class="options__input" type="radio" value="3" name="option">
-										<label for="o_3" class="options__label">
-											<div class="options__content">
-												<div class="options__img _icon-delivery"></div>
-												<h4 class="options__title">Транспортная компания</h4>
-												<p class="options__text m-txt">Бесплатно при заказе от 30 000 ₽</p>
-											</div>
-										</label>
-									</div>
+				<h1 class="page-categories__title h2">Кабели и провода</h1>
+				<section class="page-categories__main categories-main mb">
+					<aside class="catalognav">
+						<div data-spollers="768,max" class="catalognav__spoilers">
+							<div class="catalognav__group">
+								<button type="button" data-spoller class="catalognav__button _icon-ar">Категория</button>
+								<div class="catalognav__spoiler ">
+									<form action="#" class="catalognav__categories">
+										<span><label class="catalognav__category"><input type="checkbox">Кабели и провода</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Светильники</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Лампы</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Электроустановочные изделия</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Кабеленесущие системы</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Устройства защиты, плавкие предохранители</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Оборудование низковольтное</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Кабеленесущие системы</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Электрические распределительные системы</label></span>
+									</form>
+									<a href="categories.html" class="catalognav__link">Показать все категории</a>
 								</div>
 							</div>
-							<div class="ordering__payment options2">
-								<span>3. Как вам будет удобнее оплатить заказ?</span>
-								<div class="options2__item">
-									<input hidden id="o_4" class="options2__input" type="radio" value="1" name="option2">
-									<label for="o_4" class="options2__label">
-										<div class="options2__content">Банковский или почтовый перевод</div>
-									</label>
+							<div class="catalognav__group">
+								<button type="button" data-spoller class="catalognav__button _icon-ar">Цена</button>
+								<div class="catalognav__spoiler">
+									<div id="range" class="catalognav__range"></div>
 								</div>
-								<div class="options2__item">
-									<input checked hidden id="o_5" class="options2__input" type="radio" value="2" name="option2">
-									<label for="o_5" class="options2__label">
-										<div class="options2__content">Наличными или картой в магазине</div>
-									</label>
-								</div>
-								<div class="options2__item">
-									<input hidden id="o_6" class="options2__input" type="radio" value="3" name="option2">
-									<label for="o_6" class="options2__label">
-										<div class="options2__content">Онлайн-оплата без комиссии</div>
-									</label>
+							</div>
+							<div class="catalognav__group">
+								<button type="button" data-spoller class="catalognav__button _icon-ar">Производитель</button>
+								<div class="catalognav__spoiler">
+									<form action="#" class="catalognav__categories">
+										<span><label class="catalognav__category"><input type="checkbox">ЗМ</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">АВВ</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">ASD</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Ballu</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">BURO</label></span>
+										<span><label class="catalognav__category"><input type="checkbox">Bylectrica</label></span>
+									</form>
+									<a href="brands.html" class="catalognav__link">Показать всех производителей</a>
 								</div>
 							</div>
 						</div>
-						<div class="ordering__accept ordering-accept">
-							<h2 class="ordering-accept__title h2">Итого</h2>
-							<span>
-								<a href="basket" class="ordering-accept__count">1 товар</a>
-								<div class="ordering-accept__summ">1 040<span> ₽</span></div>
-							</span>
-							<div class="ordering-accept__info">
-								<p class="ordering-accept__text"><span>Самовывоз: </span> ул. Бакалинская, д. 29</p>
-								<p class="ordering-accept__text"><span>Дата: </span> Забирайте сегодня</p>
-								<p class="ordering-accept__text"><span>Оплата: </span> Онлайн-&shy;оплата без комиссии</p>
+					</aside>
+					<div class="categories-main__body">
+						<ul class="categories-main__subcategory-list">
+							<li class="categories-main__subcategory-item">
+								<a href="category.html" class="categories-main__subcategory-link">
+									<div class="categories-main__subcategory-image-ibc"><picture><source data-srcset="img/products/2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/2.jpg" alt="Изображение подкатегории"></picture></div>
+									<h3 class="categories-main__subcategory-title">Кабели связи</h3>
+								</a>
+							</li>
+							<li class="categories-main__subcategory-item">
+								<a href="category.html" class="categories-main__subcategory-link">
+									<div class="categories-main__subcategory-image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение подкатегории"></picture></div>
+									<h3 class="categories-main__subcategory-title">Кабель высокого напряжения</h3>
+								</a>
+							</li>
+							<li class="categories-main__subcategory-item">
+								<a href="category.html" class="categories-main__subcategory-link">
+									<div class="categories-main__subcategory-image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение подкатегории"></picture></div>
+									<h3 class="categories-main__subcategory-title">Кабель высокого напряжения</h3>
+								</a>
+							</li>
+							<li class="categories-main__subcategory-item">
+								<a href="category.html" class="categories-main__subcategory-link">
+									<div class="categories-main__subcategory-image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение подкатегории"></picture></div>
+									<h3 class="categories-main__subcategory-title">Кабель гибкий</h3>
+								</a>
+							</li>
+						</ul>
+						<button type="button" class="categories-main__subcategory-showmore">Показать еще</button>
+						<ul class="tags">
+							<li class="tags__tag tags__tag_showmore">
+								<a href="#" class="tags__tag-link tags__tag-link">Ещё</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Силовые</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Медь</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Алюминиевая</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Бронированный</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Гибкий</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Земля</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Огнестойкий</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Плоский</a>
+							</li>
+							<li class="tags__tag">
+								<a href="#" class="tags__tag-link">Электрический</a>
+							</li>
+						</ul>
+						<div class="categories-main__content">
+							<div class="categories-main__choose">
+								<select data-speed="500" name="form[]" class="_categories">
+									<option value="1" selected>По популярности</option>
+									<option value="2">По рейтингу</option>
+									<option value="3">По цене</option>
+									<option value="4">По количеству</option>
+								</select>
 							</div>
-							<a href="order-accept.html" class="ordering-accept__btn btn-3">Подтвердить заказ</a>
+							<ul class="categories-main__list">
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+											<div class="category-item__sticker">Хит</div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+											<div class="category-item__sticker">Хит</div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+											<div class="category-item__sticker">Хит</div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+											<div class="category-item__sticker">Хит</div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+								<li class="categories-main__item-body">
+									<article class="categories-main__item category-item">
+										<a class="category-item__link" href="product.html">
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
+											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
+											<div class="category-item__country m-txt">Rexant (Россия)</div>
+										</a>
+										<menu class="category-item__actions">
+											<span>
+												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__compare _icon-lines"></button>
+												<button type="button" class="category-item__likes likes"></button>
+											</span>
+											<button type="button" class="category-item__buy btn-5">Купить в 1 клик</button>
+										</menu>
+									</article>
+								</li>
+							</ul>
+							<button type="button" class="categories-main__btn btn-5">Показать еще</button>
 						</div>
-					</form>
+					</div>
+				</section>
+				<section class="page-categories__advantages">
+					<div class="advantages2">
+						<h2 class="advantages2__title h2">Преимущества нашего магазина</h2>
+						<ul class="advantages2__list">
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Скидки постоянным <br> покупателям до 7%</h3>
+								<div class="advantages2__img _icon-percent2"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Отсрочка <br>постоянным покупателям</h3>
+								<div class="advantages2__img _icon-clock2"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Продукция на складе<br> и под заказ</h3>
+								<div class="advantages2__img _icon-box5"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Оплата наличными и <br> безналичными средствами</h3>
+								<div class="advantages2__img _icon-box6"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Возможность отгрузки товара <br> на следующий рабочий день</h3>
+								<div class="advantages2__img _icon-delivery2"></div>
+							</li>
+							<li dw dwo class="advantages2__item an">
+								<h3 class="advantages2__subtitle">Менеджеры <br> на связи 24\7</h3>
+								<div class="advantages2__img _icon-managers2"></div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="page-categories__info categories-info">
+					<ul class="categories-info__list">
+						<li dw dwo class="categories-info__item an">
+							<div class="categories-info__img _icon-box"></div>
+							<p class="categories-info__text">Оформить заказ на сайте</p>
+						</li>
+						<li dw dwo class="categories-info__item an">
+							<div class="categories-info__img _icon-managers"></div>
+							<p class="categories-info__text">Наш менеджер подтвердит заказ</p>
+						</li>
+						<li dw dwo class="categories-info__item an">
+							<div class="categories-info__img _icon-delivery"></div>
+							<p class="categories-info__text">Мы доставляем ваш заказ</p>
+						</li>
+						<li dw dwo class="categories-info__item an">
+							<div class="categories-info__img _icon-like2"></div>
+							<p class="categories-info__text">Вы наслаждаетесь покупкой</p>
+						</li>
+					</ul>
 				</section>
 			</div>
 		</main>
