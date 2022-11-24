@@ -3047,7 +3047,7 @@
             const priceSlider = document.querySelector("#range");
             if (priceSlider) {
                 nouislider.create(priceSlider, {
-                    start: [ 55, 1e4 ],
+                    start: [ 3e3, 1e4 ],
                     step: 1,
                     connect: true,
                     tooltips: true,
@@ -7209,6 +7209,54 @@
                 },
                 on: {}
             });
+            if (document.querySelector(".popular-sl__popular-sl2")) new core(".popular-sl__popular-sl2", {
+                modules: [ Navigation, Lazy, Autoplay ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 2.57,
+                spaceBetween: 40,
+                speed: 1800,
+                grabCursor: true,
+                loop: true,
+                watchOverflow: true,
+                preloadImages: false,
+                lazy: {
+                    watchSlidesProgress: true,
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1,
+                    loadOnTransitionStart: true
+                },
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    nextEl: ".popular-sl__arrow2"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1
+                    },
+                    480: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 15
+                    },
+                    768: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 15
+                    },
+                    768: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 15
+                    },
+                    992: {
+                        slidesPerView: 2.57,
+                        spaceBetween: 40
+                    }
+                },
+                on: {}
+            });
             if (document.querySelector(".electro-subinfo__slider")) new core(".electro-subinfo__slider", {
                 modules: [ Navigation, Lazy, Autoplay ],
                 observer: true,
@@ -7298,6 +7346,49 @@
                     1150: {
                         slidesPerView: 3.755,
                         spaceBetween: 40
+                    }
+                },
+                on: {}
+            });
+            if (document.querySelector(".category-main__slider")) new core(".category-main__slider", {
+                modules: [ Navigation, Lazy, Autoplay ],
+                observer: true,
+                observeParents: true,
+                speed: 1800,
+                grabCursor: true,
+                loop: true,
+                watchOverflow: true,
+                preloadImages: false,
+                lazy: {
+                    watchSlidesProgress: true,
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1,
+                    loadOnTransitionStart: true
+                },
+                autoplay: {
+                    delay: 4e3,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    nextEl: ".category-main__arrow"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 50
+                    },
+                    500: {
+                        slidesPerView: 2.1,
+                        spaceBetween: 15
+                    },
+                    768: {
+                        slidesPerView: 2.4,
+                        spaceBetween: 15
+                    },
+                    1150: {
+                        slidesPerView: 2.85,
+                        spaceBetween: 30
                     }
                 },
                 on: {}
@@ -7708,6 +7799,16 @@
             }
         }
         initFavs();
+        function initComapre() {
+            var items = document.getElementsByClassName("compare");
+            for (var x = 0; x < items.length; x++) {
+                var item = items[x];
+                item.addEventListener("click", (function(fn) {
+                    fn.target.classList.toggle("compared");
+                }));
+            }
+        }
+        initComapre();
         window["FLS"] = true;
         isWebp();
         addTouchClass();
