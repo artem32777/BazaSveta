@@ -5043,7 +5043,7 @@ body::after {
   }
 }
 
-.goods-sl__slide > span {
+.goods-sl__span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5056,13 +5056,13 @@ body::after {
 }
 
 @supports (margin-bottom: clamp( 0.9375rem , 0.6060082873rem  +  1.6574585635vw , 1.875rem )) {
-  .goods-sl__slide > span {
+  .goods-sl__span {
     margin-bottom: clamp( 0.9375rem , 0.6060082873rem  +  1.6574585635vw , 1.875rem );
   }
 }
 
 @supports not (margin-bottom: clamp( 0.9375rem , 0.6060082873rem  +  1.6574585635vw , 1.875rem )) {
-  .goods-sl__slide > span {
+  .goods-sl__span {
     margin-bottom: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 56.5625);
   }
 }
@@ -5272,7 +5272,7 @@ body::after {
   }
 }
 
-.popular-sl__content > span {
+.popular-sl__span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
