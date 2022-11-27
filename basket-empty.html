@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221127043515">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221128013142">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<header data-scroll="150" data-scroll-show="1000" class="header">
-			<menu class="header__container_top">
+			<div class="header__container_top">
 				<nav class="header__top header-top">
 					<div data-da=".popup__geo,1150" class="header-top__location">
 						<select data-speed="500" name="form[]" class="_location">
@@ -26,7 +26,7 @@
 					</div>
 					<div data-da=".popup__text,479.98" class="header-top__callback">
 						<a href="tel:84958774377" class="header-top__number"><span>8 (495) 877-43-77</span></a>
-						<time class="header-top__time">Пн-Пт: с 09:00-18:00</time>
+						<div class="header-top__time">Пн-Пт: с 09:00-18:00</div>
 					</div>
 					<ul class="header-top__menu">
 						<li class="header-top__item"><a href="electros.html" class="header-top__link">Сборка электрощитков</a></li>
@@ -55,57 +55,57 @@
 						</li>
 						<li class="header-top__item"><a href="contacts.html" class="header-top__link">Контакты</a></li>
 					</ul>
-					<button type="button" class="icon-menu">
-						<div id="hamburger">
+					<div class="hamburger">
+						<div class="hamburger__lines">
 							<span></span>
 							<span></span>
 							<span></span>
 						</div>
-						<div id="cross">
+						<div class="hamburger__cross">
 							<span></span>
 							<span></span>
 						</div>
-					</button>
+					</div>
 				</nav>
-			</menu>
-			<menu class="header__container_bottom">
+			</div>
+			<div class="header__container_bottom">
 				<nav class="header__bottom header-bottom">
 					<a class="header-bottom__logos" href="index.html">
 						<img class="header-bottom__logo" data-src="img/logo.svg" alt="Логотип компании">
 						<img class="header-bottom__logoshort" data-src="img/logoshort.svg" alt="Логотип компании">
 					</a>
 					<div class="header-bottom__catalog-btn btn-3">
-						<button type="button" class="icon-catalog">
-							<div id="catalog-bruger">
+						<div class="icon-catalog">
+							<div class="icon-catalog__lines">
 								<span></span>
 								<span></span>
 								<span></span>
 							</div>
-							<div id="catalog-cross">
+							<div class="icon-catalog__cross">
 								<span></span>
 								<span></span>
 							</div>
-						</button>
+						</div>
 						<span>Продукция</span>
 					</div>
 					<form data-dev class="header-bottom__search">
 						<button type="submit" class="header-bottom__search-btn _icon-search"></button>
 						<input data-required autocomplete="off" type="text" name="form[]" data-error="" placeholder="Поиск по таварам" class="header-bottom__search-inp">
 						<nav class="search-modal">
-							<ul data-simplebar class="search-modal__list">
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-							</ul>
+							<div data-simplebar class="search-modal__list">
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+							</div>
 						</nav>
 					</form>
 					<menu data-da=".header-top,1150,2" class="header-bottom__actions">
@@ -124,7 +124,7 @@
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
 					</menu>
 				</nav>
-			</menu>
+			</div>
 		</header>
 
 
@@ -132,6 +132,7 @@
 
 		<main class="page page-basket-empty">
 			<section data-tabs data-tabs-animate="500" class="catalog tabs">
+				<h2 hidden>Каталог товаров</h2>
 				<nav data-tabs-titles class="catalog__menu tabs__navigation">
 					<button type="button" class="catalog__title tabs__title _tab-active">Кабели и провода</button>
 					<button type="button" class="catalog__title tabs__title">Светильники</button>
@@ -1976,7 +1977,7 @@
 			<nav hidden class="catalog-mini">
 
 				<div class="catalog-mini__title header-bottom__catalog-btn">
-					<button type="button" class="icon-catalog">
+					<div class="icon-catalog">
 						<div id="catalog-bruger">
 							<span></span>
 							<span></span>
@@ -1986,7 +1987,7 @@
 							<span></span>
 							<span></span>
 						</div>
-					</button>
+					</div>
 					<span>Каталог товаров</span>
 				</div>
 				<ul class="catalog-mini__list">
@@ -2082,16 +2083,6 @@
 			</div>
 		</footer>
 	</div>
-	<div id="callback" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					callback
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div id="location" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -2116,7 +2107,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221127043515"></script>
+	<script src="js/app.min.js?_v=20221128013142"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221127043515">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221128013142">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<header data-scroll="150" data-scroll-show="1000" class="header">
-			<menu class="header__container_top">
+			<div class="header__container_top">
 				<nav class="header__top header-top">
 					<div data-da=".popup__geo,1150" class="header-top__location">
 						<select data-speed="500" name="form[]" class="_location">
@@ -26,7 +26,7 @@
 					</div>
 					<div data-da=".popup__text,479.98" class="header-top__callback">
 						<a href="tel:84958774377" class="header-top__number"><span>8 (495) 877-43-77</span></a>
-						<time class="header-top__time">Пн-Пт: с 09:00-18:00</time>
+						<div class="header-top__time">Пн-Пт: с 09:00-18:00</div>
 					</div>
 					<ul class="header-top__menu">
 						<li class="header-top__item"><a href="electros.html" class="header-top__link">Сборка электрощитков</a></li>
@@ -55,57 +55,57 @@
 						</li>
 						<li class="header-top__item"><a href="contacts.html" class="header-top__link">Контакты</a></li>
 					</ul>
-					<button type="button" class="icon-menu">
-						<div id="hamburger">
+					<div class="hamburger">
+						<div class="hamburger__lines">
 							<span></span>
 							<span></span>
 							<span></span>
 						</div>
-						<div id="cross">
+						<div class="hamburger__cross">
 							<span></span>
 							<span></span>
 						</div>
-					</button>
+					</div>
 				</nav>
-			</menu>
-			<menu class="header__container_bottom">
+			</div>
+			<div class="header__container_bottom">
 				<nav class="header__bottom header-bottom">
 					<a class="header-bottom__logos" href="index.html">
 						<img class="header-bottom__logo" data-src="img/logo.svg" alt="Логотип компании">
 						<img class="header-bottom__logoshort" data-src="img/logoshort.svg" alt="Логотип компании">
 					</a>
 					<div class="header-bottom__catalog-btn btn-3">
-						<button type="button" class="icon-catalog">
-							<div id="catalog-bruger">
+						<div class="icon-catalog">
+							<div class="icon-catalog__lines">
 								<span></span>
 								<span></span>
 								<span></span>
 							</div>
-							<div id="catalog-cross">
+							<div class="icon-catalog__cross">
 								<span></span>
 								<span></span>
 							</div>
-						</button>
+						</div>
 						<span>Продукция</span>
 					</div>
 					<form data-dev class="header-bottom__search">
 						<button type="submit" class="header-bottom__search-btn _icon-search"></button>
 						<input data-required autocomplete="off" type="text" name="form[]" data-error="" placeholder="Поиск по таварам" class="header-bottom__search-inp">
 						<nav class="search-modal">
-							<ul data-simplebar class="search-modal__list">
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-							</ul>
+							<div data-simplebar class="search-modal__list">
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+							</div>
 						</nav>
 					</form>
 					<menu data-da=".header-top,1150,2" class="header-bottom__actions">
@@ -124,7 +124,7 @@
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
 					</menu>
 				</nav>
-			</menu>
+			</div>
 		</header>
 
 
@@ -132,6 +132,7 @@
 
 		<main class="page page-basket">
 			<section data-tabs data-tabs-animate="500" class="catalog tabs">
+				<h2 hidden>Каталог товаров</h2>
 				<nav data-tabs-titles class="catalog__menu tabs__navigation">
 					<button type="button" class="catalog__title tabs__title _tab-active">Кабели и провода</button>
 					<button type="button" class="catalog__title tabs__title">Светильники</button>
@@ -1976,7 +1977,7 @@
 			<nav hidden class="catalog-mini">
 
 				<div class="catalog-mini__title header-bottom__catalog-btn">
-					<button type="button" class="icon-catalog">
+					<div class="icon-catalog">
 						<div id="catalog-bruger">
 							<span></span>
 							<span></span>
@@ -1986,7 +1987,7 @@
 							<span></span>
 							<span></span>
 						</div>
-					</button>
+					</div>
 					<span>Каталог товаров</span>
 				</div>
 				<ul class="catalog-mini__list">
@@ -2019,26 +2020,25 @@
 						<span>
 							<p class="alert__text _icon-info">Стоимость товаров может меняться из-за изменения цен у поставщиков. Оформите заказ, чтобы зафиксировать цену.</p>
 						</span>
-						<button type="button" class="alert__close _icon-close"></button>
 					</div>
 					<form data-dev action="#" class="page-basket__search">
 						<input data-required autocomplete="off" type="text" name="form[]" data-error="" placeholder="Быстрое добавление: введите наименование или код товара" class="page-basket__input m-txt">
 						<button type="submit" class="page-basket__search-btn _icon-search"></button>
 						<nav class="search-modal">
-							<ul data-simplebar class="search-modal__list">
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-								<li class="search-modal__item"><a href="#">Кабели силовые</a></li>
-							</ul>
+							<div data-simplebar class="search-modal__list">
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+								<div class="search-modal__item"><a href="#">Кабели силовые</a></div>
+							</div>
 						</nav>
 					</form>
 				</section>
@@ -2047,15 +2047,15 @@
 						<label class="basket__checkall"><input type="checkbox">Выделить все</label>
 						<button type="button" class="basket__delete-all _icon-close">Удалить выбранные</button>
 					</menu>
-					<ul class="basket__list">
-						<li class="basket__header">
+					<div class="basket__content">
+						<div class="basket__header">
 							<div class="basket__subtitle">Наименование</div>
 							<div class="basket__subtitle">Цена</div>
 							<div class="basket__subtitle">Кол-во</div>
 							<div class="basket__subtitle">Стоимость</div>
-						</li>
-						<li class="basket__item-body">
-							<article class="basket__item basket-product">
+						</div>
+						<ul class="basket__item-body">
+							<li class="basket__item basket-product">
 								<input class="basket-product__check" type="checkbox">
 								<div class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
 								<div class="basket-product__info-block">
@@ -2075,10 +2075,89 @@
 									<div class="basket-product__summ">519.60 <span> ₽</span></div>
 								</span>
 								<button type="button" class="basket-product__delete _icon-close"></button>
-							</article>
-						</li>
-					</ul>
+							</li>
+							<li class="basket__item basket-product">
+								<input class="basket-product__check" type="checkbox">
+								<div class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+								<div class="basket-product__info-block">
+									<div class="basket-product__sticker">Лучшая цена</div>
+									<div class="basket-product__number m-txt">код: <span> 15565447</span></div>
+									<h3 class="basket-product__name">Светильник N-212-E27-40W-BK настол. черн. ЭРА Б0035058</h3>
+								</div>
+								<span class="basket-product__prices">
+									<div class="basket-product__price">519.60 <span> ₽</span></div>
+									<div class="basket-product__quantity quantity">
+										<button type="button" class="quantity__button quantity__button_minus"></button>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<button type="button" class="quantity__button quantity__button_plus"></button>
+									</div>
+									<div class="basket-product__summ">519.60 <span> ₽</span></div>
+								</span>
+								<button type="button" class="basket-product__delete _icon-close"></button>
+							</li>
+						</ul>
+					</div>
 					<a href="#" class="basket__return-btn btn-3">Вернуться к покупкам</a>
+				</section>
+				<section class="page-basket__ordering basket-ordering">
+					<form class="basket-ordering__form" data-dev action="">
+						<div class="basket-ordering__content">
+							<h2 class="basket-ordering__title h2">Ваш заказ</h2>
+							<dl class="basket-ordering__info">
+								<div class="basket-ordering__info-item">
+									<dt>Выбрано товаров:</dt>
+									<dd>2 <span> шт</span></dd>
+								</div>
+								<div class="basket-ordering__info-item">
+									<dt>Вес заказа:</dt>
+									<dd>0,92 <span> кг</span></dd>
+								</div>
+								<div class="basket-ordering__info-item">
+									<dt>Общая стоимость:</dt>
+									<dd>1 040 <span> ₽</span></dd>
+								</div>
+							</dl>
+							<input autocomplete="off" type="text" name="form[]" data-error="" placeholder="Введите промокод" class="basket-ordering__input m-txt">
+							<button type="submit" class="basket-ordering__btn1 btn-3">Оформить заказ</button>
+							<button type="button" class="basket-ordering__btn2 btn-5">Быстрый заказ</button>
+						</div>
+						<div class="basket-ordering__delivery">
+							<div class="options">
+								<div data-required class="options__item">
+									<input hidden id="o_1" class="options__input" type="radio" value="1" name="option">
+									<label for="o_1" class="options__label">
+										<div class="options__content">
+											<div class="options__img _icon-geo2"></div>
+											<h4 class="options__title">Самовывоз</h4>
+											<p class="options__text m-txt">Послезавтра - бесплатно</p>
+										</div>
+									</label>
+								</div>
+								<div class="options__item">
+									<input hidden id="o_2" class="options__input" type="radio" value="2" name="option">
+									<label for="o_2" class="options__label">
+										<div class="options__content">
+											<div class="options__img _icon-box3"></div>
+											<h4 class="options__title">Доставка курьером</h4>
+											<p class="options__text m-txt">Послезавтра - бесплатно</p>
+										</div>
+									</label>
+								</div>
+								<div class="options__item">
+									<input hidden id="o_3" class="options__input" type="radio" value="3" name="option">
+									<label for="o_3" class="options__label">
+										<div class="options__content">
+											<div class="options__img _icon-delivery"></div>
+											<h4 class="options__title">Транспортная компания</h4>
+											<p class="options__text m-txt">Бесплатно при заказе от 30 000 ₽</p>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
 				</section>
 			</div>
 		</main>
@@ -2144,16 +2223,6 @@
 			</div>
 		</footer>
 	</div>
-	<div id="callback" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					callback
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div id="location" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -2178,7 +2247,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221127043515"></script>
+	<script src="js/app.min.js?_v=20221128013142"></script>
 </body>
 
 </html>

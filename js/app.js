@@ -5492,8 +5492,8 @@
             }
         }
         function menuInit() {
-            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
-                if (bodyLockStatus && e.target.closest(".icon-menu")) {
+            if (document.querySelector(".hamburger")) document.addEventListener("click", (function(e) {
+                if (bodyLockStatus && e.target.closest(".hamburger")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
                 }
