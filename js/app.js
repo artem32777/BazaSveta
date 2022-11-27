@@ -11961,7 +11961,7 @@
             }
             scrollWatcherRun() {
                 document.documentElement.classList.add("watcher");
-                this.scrollWatcherConstructor(document.querySelectorAll("[dw]"));
+                this.scrollWatcherConstructor(document.querySelectorAll("[data-watch]"));
             }
             scrollWatcherConstructor(items) {
                 if (items.length) {
@@ -11992,7 +11992,7 @@
                 if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if ("null" !== paramsWatch.root) this.scrollWatcherLogging(`Эмм... родительского объекта ${paramsWatch.root} нет на странице`);
                 configWatcher.rootMargin = paramsWatch.margin;
                 if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
-                    this.scrollWatcherLogging(`Ой ой, настройку dw-margin нужно задавать в PX или %`);
+                    this.scrollWatcherLogging(`Ой ой, настройку data-watch-margin нужно задавать в PX или %`);
                     return;
                 }
                 if ("prx" === paramsWatch.threshold) {
@@ -12032,7 +12032,7 @@
             scrollWatcherCallback(entry, observer) {
                 const targetElement = entry.target;
                 this.scrollWatcherIntersecting(entry, targetElement);
-                targetElement.hasAttribute("dwo") && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
+                targetElement.hasAttribute("data-watch-once") && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
                 document.dispatchEvent(new CustomEvent("watcherCallback", {
                     detail: {
                         entry
