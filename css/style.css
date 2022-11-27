@@ -15287,6 +15287,19 @@ body::after {
             transform: scale(1.2) translate(-5px, -1px);
   }
 
+  .btn-2:active {
+    background-color: #18973B;
+    -webkit-transform: translate(0px, -2px);
+        -ms-transform: translate(0px, -2px);
+            transform: translate(0px, -2px);
+  }
+
+  .btn-2:active::before {
+    -webkit-transform: scale(1.2) translate(-5px, -1px) rotate(20deg);
+        -ms-transform: scale(1.2) translate(-5px, -1px) rotate(20deg);
+            transform: scale(1.2) translate(-5px, -1px) rotate(20deg);
+  }
+
   .btn-4:hover::before {
     -webkit-transform: translate(10px, 3px) scale(1.5);
         -ms-transform: translate(10px, 3px) scale(1.5);
