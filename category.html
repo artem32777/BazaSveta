@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221128044717">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221204021033">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 							<option value="3">Дзержинский</option>
 						</select>
 					</div>
-					<div data-da=".popup__text,479.98" class="header-top__callback">
+					<div class="header-top__callback">
 						<a href="tel:84958774377" class="header-top__number"><span>8 (495) 877-43-77</span></a>
 						<div class="header-top__time">Пн-Пт: с 09:00-18:00</div>
 					</div>
@@ -112,14 +112,14 @@
 						<a href="tel:84958774377" class="header-bottom__phone header-bottom__action _icon-phone"></a>
 						<button data-popup="#location" type="button" class="header-bottom__location header-bottom__action _icon-geo"></button>
 						<button type="button" class="header-bottom__search-m header-bottom__action _icon-search"></button>
-						<a href="compare.html" class="header-bottom__chart header-bottom__action _icon-lines">
+						<a href="compare.html" class="header-bottom__compare header-bottom__action _icon-lines">
 							<div>2</div>
 						</a>
 						<a href="favorite.html" class="header-bottom__favorites header-bottom__action _icon-like">
 							<div>1</div>
 						</a>
 						<a href="basket.html" class="header-bottom__basket header-bottom__action _icon-basket">
-							<div>2</div>
+							<div class="header-bottom__basket-quantity">2</div>
 						</a>
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
 					</div>
@@ -2262,19 +2262,19 @@
 							</div>
 							<ul class="category-main__list">
 								<li class="category-main__item-body">
-									<article class="category-main__item category-item">
+									<article class="category-main__item category-item card">
 										<a class="category-item__link" href="product.html">
-											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+											<div class="category-item__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="card-img" data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
 											<div class="category-item__sticker">Хит</div>
-											<h3 class="category-item__name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
-											<div class="category-item__price"><span>4,68 </span> ₽/м</div>
+											<h3 class="category-item__name card-name">Кабель ВВГп-нг(А) LS 2х2,5 ГОСТ СКЗ</h3>
+											<div class="category-item__price card-price">4,68 </span> ₽/м</div>
 											<div class="category-item__amount">В наличии <span> 2651 м</span></div>
 											<div class="category-item__number m-txt">Код: <span> 106105 - 48421</span></div>
 											<div class="category-item__country m-txt">Rexant (Россия)</div>
 										</a>
 										<menu class="category-item__actions">
 											<span>
-												<button type="button" class="category-item__basket btn-2">В корзину</button>
+												<button type="button" class="category-item__basket btn-2 card-btn">В корзину</button>
 												<button type="button" class="category-item__compare compare _icon-lines"></button>
 												<button type="button" class="category-item__likes likes"></button>
 											</span>
@@ -2849,7 +2849,7 @@
 					<h2 class="page-category__subtitle h2">Популярные отзывы</h2>
 					<ul class="reviews">
 						<li data-watch data-watch-once class="reviews__review an">
-							<div class="reviews__content">
+							<article class="reviews__content">
 								<h3 class="reviews__title">Отзыв на кабель ВВГп-нг (А) LS 2x2,5 ГОСТ СКЗ</h3>
 								<div class="reviews__author m-txt">Алексей</div>
 								<div class="reviews__date m-txt">02.02.2022</div>
@@ -2858,11 +2858,11 @@
 									<div class="sidebar-top__rating"></div>
 									<a href="#" class="sidebar-top__review m-txt"><span>10 </span>отзывов</a>
 								</div>
-							</div>
+							</article>
 							<div class="reviews__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
 						</li>
 						<li data-watch data-watch-once class="reviews__review an">
-							<div class="reviews__content">
+							<article class="reviews__content">
 								<h3 class="reviews__title">Отзыв на кабель </h3>
 								<div class="reviews__author m-txt">Алексей</div>
 								<div class="reviews__date m-txt">02.02.2022</div>
@@ -2871,7 +2871,7 @@
 									<div class="sidebar-top__rating"></div>
 									<a href="#" class="sidebar-top__review m-txt"><span>10 </span>отзывов</a>
 								</div>
-							</div>
+							</article>
 							<div class="reviews__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
 						</li>
 					</ul>
@@ -3044,7 +3044,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221128044717"></script>
+	<script src="js/app.min.js?_v=20221204021033"></script>
 </body>
 
 </html>

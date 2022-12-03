@@ -5316,6 +5316,117 @@
                 }), delay);
             }
         };
+        function phoneMask() {
+            document.addEventListener("DOMContentLoaded", (function() {
+                var eventCalllback = function(e) {
+                    var el = e.target, clearVal = el.dataset.phoneClear, pattern = el.dataset.phonePattern, matrix_def = "+7(___) ___-__-__", matrix = pattern ? pattern : matrix_def, i = 0, def = matrix.replace(/\D/g, ""), val = e.target.value.replace(/\D/g, "");
+                    if ("false" !== clearVal && "blur" === e.type) if (val.length < matrix.match(/([\_\d])/g).length) {
+                        e.target.value = "";
+                        return;
+                    }
+                    if (def.length >= val.length) val = def;
+                    e.target.value = matrix.replace(/./g, (function(a) {
+                        return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
+                    }));
+                };
+                var phone_inputs = document.querySelectorAll("[data-phone-pattern]");
+                for (let elem of phone_inputs) for (let ev of [ "input", "blur", "focus" ]) elem.addEventListener(ev, eventCalllback);
+            }));
+        }
+        function imgUpload() {
+            if (document.querySelector(".upload")) {
+                function updateUploadImages() {
+                    console.log(this.files);
+                    if (this.files && this.files.length) {
+                        preview.src = window.URL.createObjectURL(this.files[0]);
+                        preview.setAttribute("height", "100%");
+                    } else {
+                        preview.setAttribute("height", "39px");
+                        preview.src = "img/reviews/icon.svg";
+                    }
+                }
+                function hightlightDropzone(event) {
+                    event.preventDefault();
+                    this.classList.add("drop");
+                }
+                function unhightlightDropzone(event) {
+                    event.preventDefault();
+                    this.classList.remove("drop");
+                }
+                const upload = document.getElementById("upload");
+                const preview = document.getElementById("preview");
+                const dropzone = document.getElementsByClassName("upload-label");
+                if (dropzone && dropzone.length) {
+                    const dropField = dropzone[0];
+                    dropField.addEventListener("dragover", hightlightDropzone);
+                    dropField.addEventListener("dragenter", hightlightDropzone);
+                    dropField.addEventListener("dragleave", unhightlightDropzone);
+                    dropField.addEventListener("drop", (event => {
+                        const dt = event.dataTransfer;
+                        unhightlightDropzone.call(dropField, event);
+                        updateUploadImages.call(dt);
+                    }));
+                }
+                upload.addEventListener("change", updateUploadImages);
+            }
+        }
+        function functions_fileUpload() {
+            if (document.querySelector(".upload-file")) {
+                const upload = document.getElementById("upload");
+                const dropzone = document.getElementsByClassName("upload-label");
+                function hightlightDropzone(event) {
+                    event.preventDefault();
+                    this.classList.add("drop");
+                }
+                function unhightlightDropzone(event) {
+                    event.preventDefault();
+                    this.classList.remove("drop");
+                }
+                function updateUpload() {
+                    const uploaded = document.querySelector(".upload-file");
+                    uploaded.classList.add("_uploaded");
+                }
+                if (dropzone && dropzone.length) {
+                    const dropField = dropzone[0];
+                    dropField.addEventListener("dragover", hightlightDropzone);
+                    dropField.addEventListener("dragenter", hightlightDropzone);
+                    dropField.addEventListener("dragleave", unhightlightDropzone);
+                    dropField.addEventListener("drop", (event => {
+                        const dt = event.dataTransfer;
+                        unhightlightDropzone.call(dropField, event);
+                        updateUpload.call(dt);
+                    }));
+                }
+                upload.addEventListener("change", updateUpload);
+            }
+        }
+        function CheckAll() {
+            if (document.querySelector(".basket__checkall")) {
+                const btn = document.querySelector(".basket__checkall-inp");
+                const check = document.getElementsByClassName("basket-product__check");
+                btn.addEventListener("click", (() => {
+                    if (btn.checked) for (var i = 0; i < check.length; i++) check[i].checked = true; else for (i = 0; i < check.length; i++) check[i].checked = false;
+                }));
+            }
+        }
+        function ItemDel() {
+            const deleteList = document.querySelectorAll(".card-delete");
+            deleteList.forEach((btn => {
+                btn.addEventListener("click", (() => {
+                    btn.parentElement.remove();
+                }));
+            }));
+        }
+        function itemsCheck() {
+            if (document.querySelector(".likes")) {
+                const elements = document.querySelectorAll(".likes");
+                elements.forEach((element => {
+                    element.addEventListener("click", (() => {
+                        element.classList.toggle("liked");
+                    }));
+                }));
+            }
+        }
         function spollers() {
             const spollersArray = document.querySelectorAll("[data-spollers]");
             if (spollersArray.length > 0) {
@@ -6011,6 +6122,68 @@
                     targetElement.closest(".quantity").querySelector("input").value = value;
                 }
             }));
+        }
+        function formRating() {
+            const ratings = document.querySelectorAll(".rating");
+            if (ratings.length > 0) initRatings();
+            function initRatings() {
+                let ratingActive, ratingValue;
+                for (let index = 0; index < ratings.length; index++) {
+                    const rating = ratings[index];
+                    initRating(rating);
+                }
+                function initRating(rating) {
+                    initRatingVars(rating);
+                    setRatingActiveWidth();
+                    if (rating.classList.contains("rating_set")) setRating(rating);
+                }
+                function initRatingVars(rating) {
+                    ratingActive = rating.querySelector(".rating__active");
+                    ratingValue = rating.querySelector(".rating__value");
+                }
+                function setRatingActiveWidth(index = ratingValue.innerHTML) {
+                    const ratingActiveWidth = index / .05;
+                    ratingActive.style.width = `${ratingActiveWidth}%`;
+                }
+                function setRating(rating) {
+                    const ratingItems = rating.querySelectorAll(".rating__item");
+                    for (let index = 0; index < ratingItems.length; index++) {
+                        const ratingItem = ratingItems[index];
+                        ratingItem.addEventListener("mouseenter", (function(e) {
+                            initRatingVars(rating);
+                            setRatingActiveWidth(ratingItem.value);
+                        }));
+                        ratingItem.addEventListener("mouseleave", (function(e) {
+                            setRatingActiveWidth();
+                        }));
+                        ratingItem.addEventListener("click", (function(e) {
+                            initRatingVars(rating);
+                            if (rating.dataset.ajax) setRatingValue(ratingItem.value, rating); else {
+                                ratingValue.innerHTML = index + 1;
+                                setRatingActiveWidth();
+                            }
+                        }));
+                    }
+                }
+                async function setRatingValue(value, rating) {
+                    if (!rating.classList.contains("rating_sending")) {
+                        rating.classList.add("rating_sending");
+                        let response = await fetch("rating.json", {
+                            method: "GET"
+                        });
+                        if (response.ok) {
+                            const result = await response.json();
+                            const newRating = result.newRating;
+                            ratingValue.innerHTML = newRating;
+                            setRatingActiveWidth();
+                            rating.classList.remove("rating_sending");
+                        } else {
+                            alert("Ошибка");
+                            rating.classList.remove("rating_sending");
+                        }
+                    }
+                }
+            }
         }
         class SelectConstructor {
             constructor(props, data = null) {
@@ -10816,6 +10989,49 @@
                 },
                 on: {}
             });
+            if (document.querySelector(".tab-reviews__slider")) new core(".tab-reviews__slider", {
+                modules: [ Navigation, Lazy, Autoplay ],
+                observer: true,
+                observeParents: true,
+                speed: 2500,
+                grabCursor: true,
+                loop: true,
+                watchOverflow: true,
+                preloadImages: false,
+                lazy: {
+                    watchSlidesProgress: true,
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1,
+                    loadOnTransitionStart: true
+                },
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                navigation: {
+                    nextEl: ".tab-reviews__arrow"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 15
+                    },
+                    480: {
+                        slidesPerView: 2.1,
+                        spaceBetween: 15
+                    },
+                    768: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 15
+                    },
+                    1150: {
+                        slidesPerView: 3.8,
+                        spaceBetween: 30
+                    }
+                },
+                on: {}
+            });
         }
         window.addEventListener("load", (function(e) {
             initSliders();
@@ -12179,41 +12395,17 @@
                 if (targetElement.classList.contains("header-bottom__search-m")) document.querySelector(".header-bottom__search").classList.toggle("_active-search"); else if (!targetElement.closest(".header-bottom__search") && document.querySelector(".header-bottom__search._active-search")) document.querySelector(".header-bottom__search").classList.remove("_active-search");
             }
         };
-        document.addEventListener("DOMContentLoaded", (function() {
-            var eventCalllback = function(e) {
-                var el = e.target, clearVal = el.dataset.phoneClear, pattern = el.dataset.phonePattern, matrix_def = "+7(___) ___-__-__", matrix = pattern ? pattern : matrix_def, i = 0, def = matrix.replace(/\D/g, ""), val = e.target.value.replace(/\D/g, "");
-                if ("false" !== clearVal && "blur" === e.type) if (val.length < matrix.match(/([\_\d])/g).length) {
-                    e.target.value = "";
-                    return;
-                }
-                if (def.length >= val.length) val = def;
-                e.target.value = matrix.replace(/./g, (function(a) {
-                    return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
-                }));
-            };
-            var phone_inputs = document.querySelectorAll("[data-phone-pattern]");
-            for (let elem of phone_inputs) for (let ev of [ "input", "blur", "focus" ]) elem.addEventListener(ev, eventCalllback);
-        }));
-        function initFavs() {
-            var items = document.getElementsByClassName("likes");
-            for (var x = 0; x < items.length; x++) {
-                var item = items[x];
-                item.addEventListener("click", (function(fn) {
-                    fn.target.classList.toggle("liked");
+        function itemsCompare() {
+            if (document.querySelector(".compare")) {
+                const elements = document.querySelectorAll(".compare");
+                elements.forEach((element => {
+                    element.addEventListener("click", (() => {
+                        element.classList.toggle("compared");
+                    }));
                 }));
             }
         }
-        initFavs();
-        function initComapre() {
-            var items = document.getElementsByClassName("compare");
-            for (var x = 0; x < items.length; x++) {
-                var item = items[x];
-                item.addEventListener("click", (function(fn) {
-                    fn.target.classList.toggle("compared");
-                }));
-            }
-        }
-        initComapre();
+        itemsCompare();
         window["FLS"] = true;
         isWebp();
         addTouchClass();
@@ -12223,11 +12415,18 @@
         fullVHfix();
         spollers();
         tabs();
+        phoneMask();
+        imgUpload();
+        functions_fileUpload();
+        CheckAll();
+        ItemDel();
+        itemsCheck();
         formFieldsInit({
             viewPass: false
         });
         formSubmit();
         formQuantity();
+        formRating();
         headerScroll();
     })();
 })();

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221128044717">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221204021033">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
 							<option value="3">Дзержинский</option>
 						</select>
 					</div>
-					<div data-da=".popup__text,479.98" class="header-top__callback">
+					<div class="header-top__callback">
 						<a href="tel:84958774377" class="header-top__number"><span>8 (495) 877-43-77</span></a>
 						<div class="header-top__time">Пн-Пт: с 09:00-18:00</div>
 					</div>
@@ -112,14 +112,14 @@
 						<a href="tel:84958774377" class="header-bottom__phone header-bottom__action _icon-phone"></a>
 						<button data-popup="#location" type="button" class="header-bottom__location header-bottom__action _icon-geo"></button>
 						<button type="button" class="header-bottom__search-m header-bottom__action _icon-search"></button>
-						<a href="compare.html" class="header-bottom__chart header-bottom__action _icon-lines">
+						<a href="compare.html" class="header-bottom__compare header-bottom__action _icon-lines">
 							<div>2</div>
 						</a>
 						<a href="favorite.html" class="header-bottom__favorites header-bottom__action _icon-like">
 							<div>1</div>
 						</a>
 						<a href="basket.html" class="header-bottom__basket header-bottom__action _icon-basket">
-							<div>2</div>
+							<div class="header-bottom__basket-quantity">2</div>
 						</a>
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
 					</div>
@@ -2020,6 +2020,7 @@
 						<span>
 							<p class="alert__text _icon-info">Стоимость товаров может меняться из-за изменения цен у поставщиков. Оформите заказ, чтобы зафиксировать цену.</p>
 						</span>
+						<button type="button" class="alert__close _icon-close card-delete"></button>
 					</div>
 					<form data-dev action="#" class="page-basket__search">
 						<input data-required autocomplete="off" type="text" name="form[]" data-error="" placeholder="Быстрое добавление: введите наименование или код товара" class="page-basket__input m-txt">
@@ -2044,7 +2045,7 @@
 				</section>
 				<section class="page-basket__basket basket mb">
 					<menu class="basket__actions">
-						<label class="basket__checkall"><input type="checkbox">Выделить все</label>
+						<label class="basket__checkall"><input class="basket__checkall-inp" type="checkbox">Выделить все</label>
 						<button type="button" class="basket__delete-all _icon-close">Удалить выбранные</button>
 					</menu>
 					<div class="basket__content">
@@ -2054,14 +2055,14 @@
 							<div class="basket__subtitle">Кол-во</div>
 							<div class="basket__subtitle">Стоимость</div>
 						</div>
-						<ul class="basket__item-body">
+						<ul class="basket__card-list">
 							<li class="basket__item basket-product">
 								<input class="basket-product__check" type="checkbox">
-								<div class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+								<a href="product.html" class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></a>
 								<div class="basket-product__info-block">
 									<div class="basket-product__sticker">Лучшая цена</div>
 									<div class="basket-product__number m-txt">код: <span> 15565447</span></div>
-									<h3 class="basket-product__name">Светильник N-212-E27-40W-BK настол. черн. ЭРА Б0035058</h3>
+									<a href="product.html" class="basket-product__name">Светильник N-212-E27-40W-BK настол. черн. ЭРА Б0035058</a>
 								</div>
 								<span class="basket-product__prices">
 									<div class="basket-product__price">519.60 <span> ₽</span></div>
@@ -2074,15 +2075,15 @@
 									</div>
 									<div class="basket-product__summ">519.60 <span> ₽</span></div>
 								</span>
-								<button type="button" class="basket-product__delete _icon-close"></button>
+								<button type="button" class="basket-product__delete _icon-close card-delete"></button>
 							</li>
-							<li class="basket__item basket-product">
+							<li class="basket__item basket-product ">
 								<input class="basket-product__check" type="checkbox">
-								<div class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></div>
+								<a href="product.html" class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></a>
 								<div class="basket-product__info-block">
 									<div class="basket-product__sticker">Лучшая цена</div>
 									<div class="basket-product__number m-txt">код: <span> 15565447</span></div>
-									<h3 class="basket-product__name">Светильник N-212-E27-40W-BK настол. черн. ЭРА Б0035058</h3>
+									<a href="product.html" class="basket-product__name">Светильник N-212</a>
 								</div>
 								<span class="basket-product__prices">
 									<div class="basket-product__price">519.60 <span> ₽</span></div>
@@ -2095,7 +2096,7 @@
 									</div>
 									<div class="basket-product__summ">519.60 <span> ₽</span></div>
 								</span>
-								<button type="button" class="basket-product__delete _icon-close"></button>
+								<button type="button" class="basket-product__delete _icon-close card-delete"></button>
 							</li>
 						</ul>
 					</div>
@@ -2247,7 +2248,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221128044717"></script>
+	<script src="js/app.min.js?_v=20221204021033"></script>
 </body>
 
 </html>
