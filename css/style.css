@@ -1,14 +1,8 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: icons;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: Montserrat;
+  font-display: swap;
   src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -16,22 +10,25 @@
 
 @font-face {
   font-family: Montserrat;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Montserrat;
+  font-display: swap;
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -6093,15 +6090,13 @@ body::after {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   font-size: 0.875rem;
-  text-decoration: underline;
   margin-bottom: 0.9375rem;
+  font-weight: 500;
 }
 
 .daily__price {
   margin-bottom: 1.25rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  font-weight: 500;
 }
 
 .home-info__list {
@@ -7944,8 +7939,8 @@ body::after {
 }
 
 .category-item__price {
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
 }
 
 @supports (margin-bottom: clamp( 0.3125rem , 0.2020027624rem  +  0.5524861878vw , 0.625rem )) {
@@ -12221,7 +12216,7 @@ body::after {
 }
 
 .return-main__text span {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .return-rules__list {
@@ -14077,15 +14072,15 @@ body::after {
   line-height: 1.5;
 }
 
-@supports (font-size: clamp( 1rem , 0.9116022099rem  +  0.4419889503vw , 1.25rem )) {
+@supports (font-size: clamp( 1rem , 0.8674033149rem  +  0.6629834254vw , 1.375rem )) {
   .delivery__item {
-    font-size: clamp( 1rem , 0.9116022099rem  +  0.4419889503vw , 1.25rem );
+    font-size: clamp( 1rem , 0.8674033149rem  +  0.6629834254vw , 1.375rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.9116022099rem  +  0.4419889503vw , 1.25rem )) {
+@supports not (font-size: clamp( 1rem , 0.8674033149rem  +  0.6629834254vw , 1.375rem )) {
   .delivery__item {
-    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 56.5625);
+    font-size: calc(1rem + 0.375 * (100vw - 20rem) / 56.5625);
   }
 }
 
@@ -14114,7 +14109,7 @@ body::after {
 }
 
 .delivery__item span {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .delivery__item:nth-child(3) {
