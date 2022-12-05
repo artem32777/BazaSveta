@@ -9,7 +9,7 @@
 	<link rel=”preload” as=”font” href=”/fonts/Montserrat-Medium.woff2” type=”font/woff2” crossorigin>
 	<link rel=”preload” as=”font” href=”/fonts/icons.woff2” type=”font/woff2” crossorigin>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221205045319">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221205192443">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +38,8 @@
 							<select data-pseudo-label="Оплата и Доставка" data-speed="500" name="form[]" class="form">
 								<option data-href="terms.html" value="1" selected>Оплата</option>
 								<option data-href="delivery.html" value="2">Доставка</option>
-								<option data-href="return.html" value="3">Обмен и возврат</option>
+								<option data-href="stocks.html" value="3">Акции</option>
+								<option data-href="return.html" value="4">Обмен и возврат</option>
 							</select>
 						</li>
 						<li class="header-top__item header-top__about">
@@ -2076,8 +2077,8 @@
 							<button type="button" class="product-tabs__title">Описание</button>
 							<button type="button" class="product-tabs__title">Отзывы</button>
 							<button type="button" class="product-tabs__title">Как купить</button>
-							<button type="button" class="product-tabs__title">Оплата</button>
-							<button type="button" class="product-tabs__title">Доставка</button>
+							<a href="terms.html" class="product-tabs__title">Оплата</a>
+							<a href="delivery.html" class="product-tabs__title">Доставка</a>
 						</nav>
 						<div data-tabs-body class="product-tabs__content">
 							<div class="product-tabs__body">
@@ -2252,7 +2253,7 @@
 											<div class="product-review__author m-txt">Алексей</div>
 											<div class="product-review__date m-txt">02.02.2022</div>
 											<p class="product-review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar.</p>
-											<div class="product-review__rating reviews__rating">
+											<div class="product-review__rating sidebar-top__reviews">
 												<div class="sidebar-top__rating"></div>
 												<a href="#" class="sidebar-top__review m-txt"><span>10 </span>отзывов</a>
 											</div>
@@ -2271,12 +2272,6 @@
 									<p>Когда оформляете быстрый заказ, напишите ФИО, телефон и e-mail. Вам перезвонит менеджер и уточнит условия заказа. По результатам разговора вам придет подтверждение оформления товара на почту или через СМС. Теперь останется только ждать доставки и радоваться новой покупке.</p>
 									<p>Оформление заказа в стандартном режиме выглядит следующим образом. Заполняете полностью форму по последовательным этапам: адрес, способ доставки, оплаты, данные о себе. Советуем в комментарии к заказу написать информацию, которая поможет курьеру вас найти. Нажмите кнопку «Оформить заказ».</p>
 								</div>
-							</div>
-							<div class="product-tabs__body">
-								Содержимое третьего таба
-							</div>
-							<div class="product-tabs__body">
-								Содержимое третьего таба
 							</div>
 						</div>
 					</div>
@@ -2449,32 +2444,32 @@
 				</section>
 				<section class="page-product__reviews mb">
 					<h2 class="page-product__subtitle h2">Отзывы о кабеле КСПВ 2х0.4 бухта (м) Rexant 01-4700</h2>
-					<ul class="reviews">
-						<li data-watch data-watch-once class="reviews__review an">
-							<article class="reviews__content">
-								<h3 class="reviews__title">Отзыв на кабель ВВГп-нг (А) LS 2x2,5 ГОСТ СКЗ</h3>
-								<div class="reviews__author m-txt">Алексей</div>
-								<div class="reviews__date m-txt">02.02.2022</div>
-								<p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar.</p>
-								<div class="reviews__rating">
+					<ul class="reviews-block">
+						<li data-watch data-watch-once class="reviews-block__review an">
+							<article class="reviews-block__content">
+								<h3 class="reviews-block__title">Отзыв на кабель ВВГп-нг (А) LS 2x2,5 ГОСТ СКЗ</h3>
+								<div class="reviews-block__author m-txt">Алексей</div>
+								<div class="reviews-block__date m-txt">02.02.2022</div>
+								<p class="reviews-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar.</p>
+								<div class="reviews-block__rating">
 									<div class="sidebar-top__rating"></div>
 									<a href="#" class="sidebar-top__review m-txt"><span>10 </span>отзывов</a>
 								</div>
 							</article>
-							<div class="reviews__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+							<div class="reviews-block__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
 						</li>
-						<li data-watch data-watch-once class="reviews__review an">
-							<article class="reviews__content">
-								<h3 class="reviews__title">Отзыв на кабель </h3>
-								<div class="reviews__author m-txt">Алексей</div>
-								<div class="reviews__date m-txt">02.02.2022</div>
-								<p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar.</p>
-								<div class="reviews__rating">
+						<li data-watch data-watch-once class="reviews-block__review an">
+							<article class="reviews-block__content">
+								<h3 class="reviews-block__title">Отзыв на кабель </h3>
+								<div class="reviews-block__author m-txt">Алексей</div>
+								<div class="reviews-block__date m-txt">02.02.2022</div>
+								<p class="reviews-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nascetur duis adipiscing ut interdum pulvinar.</p>
+								<div class="reviews-block__rating">
 									<div class="sidebar-top__rating"></div>
 									<a href="#" class="sidebar-top__review m-txt"><span>10 </span>отзывов</a>
 								</div>
 							</article>
-							<div class="reviews__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
+							<div class="reviews-block__image-ibc"><picture><source data-srcset="img/products/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/3.jpg" alt="Изображение товара"></picture></div>
 						</li>
 					</ul>
 				</section>
@@ -2986,6 +2981,7 @@
 								<li class="footer-bottom__item"><a href="news.html" class="footer-bottom__link">Новости</a></li>
 								<li class="footer-bottom__item"><a href="blogs.html" class="footer-bottom__link">Статьи</a></li>
 								<li class="footer-bottom__item"><a href="vacancies.html" class="footer-bottom__link">Вакансии</a></li>
+								<li class="footer-bottom__item"><a href="stocks.html" class="footer-bottom__link">Акции</a></li>
 							</ul>
 						</li>
 						<li class="footer-bottom__column">
@@ -3030,7 +3026,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221205045319"></script>
+	<script src="js/app.min.js?_v=20221205192443"></script>
 </body>
 
 </html>
