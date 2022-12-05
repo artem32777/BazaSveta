@@ -9,7 +9,7 @@
 	<link rel=”preload” as=”font” href=”/fonts/Montserrat-Medium.woff2” type=”font/woff2” crossorigin>
 	<link rel=”preload” as=”font” href=”/fonts/icons.woff2” type=”font/woff2” crossorigin>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221204194857">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221205045319">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,13 +116,13 @@
 						<button data-popup="#location" type="button" class="header-bottom__location header-bottom__action _icon-geo"></button>
 						<button type="button" class="header-bottom__search-m header-bottom__action _icon-search"></button>
 						<a href="compare.html" class="header-bottom__compare header-bottom__action _icon-lines">
-							<div>2</div>
+							<span>2</span>
 						</a>
 						<a href="favorite.html" class="header-bottom__favorites header-bottom__action _icon-like">
-							<div>1</div>
+							<span class="header-bottom__favorites-span">1</span>
 						</a>
 						<a href="basket.html" class="header-bottom__basket header-bottom__action _icon-basket">
-							<div class="header-bottom__basket-quantity">2</div>
+							<span class="header-bottom__basket-quantity">2</span>
 						</a>
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
 					</div>
@@ -2021,7 +2021,7 @@
 							<h2 class="electros-main__title">Производим <br> электрощитовое оборудование</h2>
 							<button type="button" class="electros-main__btn btn-3">Заказать сборку</button>
 						</div>
-						<div class="electros-main__image-ibg"><img data-src="img/electros/1.svg" alt="Сборка эелектрощитов"></div>
+						<div class="electros-main__image-ibg"><picture><source data-srcset="img/electros/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/electros/1.png" alt="Сборка эелектрощитов"></picture></div>
 					</div>
 					<ul class="electros-main__list">
 						<li data-watch data-watch-once class="electros-main__item an">
@@ -2213,7 +2213,7 @@
 								<input data-required autocomplete="off" type="text" name="form[]" data-error="" placeholder="Имя" class="form-electro__input">
 								<input data-required data-phone-pattern autocomplete="off" type="text" name="form[]" data-error="" placeholder="Телефон" class="form-electro__input">
 								<label class="form-electro__upload _icon-download upload-file upload-label">
-									Прикрепите ваше ТЗ (не обязательно)
+									<span id="upload-text">Прикрепите ваше ТЗ (не обязательно)</span>
 									<input id="upload" type="file" multiple name="form[]" class="form-electro__upload-input">
 								</label>
 								<button type="submit" class="form-electro__btn btn-3">Получить</button>
@@ -2341,7 +2341,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221204194857"></script>
+	<script src="js/app.min.js?_v=20221205045319"></script>
 </body>
 
 </html>

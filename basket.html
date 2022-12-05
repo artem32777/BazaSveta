@@ -9,7 +9,7 @@
 	<link rel=”preload” as=”font” href=”/fonts/Montserrat-Medium.woff2” type=”font/woff2” crossorigin>
 	<link rel=”preload” as=”font” href=”/fonts/icons.woff2” type=”font/woff2” crossorigin>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221204194857">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221205045319">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,13 +116,13 @@
 						<button data-popup="#location" type="button" class="header-bottom__location header-bottom__action _icon-geo"></button>
 						<button type="button" class="header-bottom__search-m header-bottom__action _icon-search"></button>
 						<a href="compare.html" class="header-bottom__compare header-bottom__action _icon-lines">
-							<div>2</div>
+							<span>2</span>
 						</a>
 						<a href="favorite.html" class="header-bottom__favorites header-bottom__action _icon-like">
-							<div>1</div>
+							<span class="header-bottom__favorites-span">1</span>
 						</a>
 						<a href="basket.html" class="header-bottom__basket header-bottom__action _icon-basket">
-							<div class="header-bottom__basket-quantity">2</div>
+							<span class="header-bottom__basket-quantity">2</span>
 						</a>
 						<a href="personal.html" class="header-bottom__personal header-bottom__action _icon-lk"></a>
 					</div>
@@ -2068,15 +2068,15 @@
 									<a href="product.html" class="basket-product__name">Светильник N-212-E27-40W-BK настол. черн. ЭРА Б0035058</a>
 								</div>
 								<span class="basket-product__prices">
-									<div class="basket-product__price">519.60 <span> ₽</span></div>
+									<div class="basket-product__price"><span>519.60 </span> ₽</div>
 									<div class="basket-product__quantity quantity">
 										<button type="button" class="quantity__button quantity__button_minus"></button>
 										<div class="quantity__input">
-											<input autocomplete="off" type="text" name="form[]" value="1">
+											<input data-price="1000" class="quantity__input-f" type="text" name="form[]" value="1">
 										</div>
 										<button type="button" class="quantity__button quantity__button_plus"></button>
 									</div>
-									<div class="basket-product__summ">519.60 <span> ₽</span></div>
+									<div class="basket-product__summ"><span>519.60 </span> ₽</div>
 								</span>
 								<button type="button" class="basket-product__delete _icon-close card-delete"></button>
 							</li>
@@ -2093,7 +2093,7 @@
 									<div class="basket-product__quantity quantity">
 										<button type="button" class="quantity__button quantity__button_minus"></button>
 										<div class="quantity__input">
-											<input autocomplete="off" type="text" name="form[]" value="1">
+											<input data-price="2000" class="quantity__input-f" type="text" name="form[]" value="1">
 										</div>
 										<button type="button" class="quantity__button quantity__button_plus"></button>
 									</div>
@@ -2120,7 +2120,7 @@
 								</div>
 								<div class="basket-ordering__info-item">
 									<dt>Общая стоимость:</dt>
-									<dd>1 040 <span> ₽</span></dd>
+									<dd><span class="basket-ordering__fullprice" id="total-price">1 040 </span> ₽</dd>
 								</div>
 							</dl>
 							<input autocomplete="off" type="text" name="form[]" data-error="" placeholder="Введите промокод" class="basket-ordering__input m-txt">
@@ -2251,7 +2251,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221204194857"></script>
+	<script src="js/app.min.js?_v=20221205045319"></script>
 </body>
 
 </html>
