@@ -9,7 +9,7 @@
 	<link rel=”preload” as=”font” href=”/fonts/Montserrat-Medium.woff2” type=”font/woff2” crossorigin>
 	<link rel=”preload” as=”font” href=”/fonts/icons.woff2” type=”font/woff2” crossorigin>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221205192443">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221206232750">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2018,45 +2018,49 @@
 				<h1 class="catalogs-main__title h2">Каталог</h1>
 				<section class="page-catalogs__main catalogs-main mb">
 					<aside class="catalognav">
-						<div data-spollers="768,max" class="catalognav__spoilers">
-							<div class="catalognav__group">
-								<button type="button" data-spoller class="catalognav__button _icon-ar">Категория</button>
-								<div class="catalognav__spoiler ">
-									<form action="#" class="catalognav__categories">
-										<span><label class="catalognav__category"><input type="checkbox">Кабели и провода</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Светильники</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Лампы</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Электроустановочные изделия</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Кабеленесущие системы</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Устройства защиты, плавкие предохранители</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Оборудование низковольтное</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Кабеленесущие системы</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Электрические распределительные системы</label></span>
-									</form>
-									<a href="categories.html" class="catalognav__link">Показать все категории</a>
+						<form action="#" class="catalognav__form">
+							<div data-spollers="768,max" class="catalognav__spoilers">
+								<div class="catalognav__group">
+									<button type="button" data-spoller class="catalognav__button _icon-ar">Категория</button>
+									<div class="catalognav__spoiler ">
+										<div class="catalognav__categories">
+											<span><label class="catalognav__category"><input type="checkbox">Кабели и провода</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Светильники</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Лампы</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Электроустановочные изделия</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Кабеленесущие системы</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Устройства защиты, плавкие предохранители</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Оборудование низковольтное</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Кабеленесущие системы</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Электрические распределительные системы</label></span>
+										</div>
+										<a href="categories.html" class="catalognav__link">Показать все категории</a>
+									</div>
+								</div>
+								<div class="catalognav__group">
+									<button type="button" data-spoller class="catalognav__button _icon-ar">Цена</button>
+									<div class="catalognav__spoiler">
+										<input hidden id="range-input-min" type="text" name="form[]" value="1">
+										<input hidden id="range-input-max" type="text" name="form[]" value="1">
+										<div id="range" class="catalognav__range"></div>
+									</div>
+								</div>
+								<div class="catalognav__group">
+									<button type="button" data-spoller class="catalognav__button _icon-ar">Производитель</button>
+									<div class="catalognav__spoiler">
+										<div class="catalognav__categories">
+											<span><label class="catalognav__category"><input type="checkbox">ЗМ</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">АВВ</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">ASD</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Ballu</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">BURO</label></span>
+											<span><label class="catalognav__category"><input type="checkbox">Bylectrica</label></span>
+										</div>
+										<a href="brands.html" class="catalognav__link">Показать всех производителей</a>
+									</div>
 								</div>
 							</div>
-							<div class="catalognav__group">
-								<button type="button" data-spoller class="catalognav__button _icon-ar">Цена</button>
-								<div class="catalognav__spoiler">
-									<div id="range" class="catalognav__range"></div>
-								</div>
-							</div>
-							<div class="catalognav__group">
-								<button type="button" data-spoller class="catalognav__button _icon-ar">Производитель</button>
-								<div class="catalognav__spoiler">
-									<form action="#" class="catalognav__categories">
-										<span><label class="catalognav__category"><input type="checkbox">ЗМ</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">АВВ</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">ASD</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Ballu</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">BURO</label></span>
-										<span><label class="catalognav__category"><input type="checkbox">Bylectrica</label></span>
-									</form>
-									<a href="brands.html" class="catalognav__link">Показать всех производителей</a>
-								</div>
-							</div>
-						</div>
+						</form>
 					</aside>
 					<div class="catalogs-main__body">
 						<ul class="catalogs-main__list">
@@ -2522,17 +2526,8 @@
 		</div>
 	</div>
 
-	<div id="form-electro" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					Ваша заявка принята!
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="js/app.min.js?_v=20221205192443"></script>
+
+	<script src="js/app.min.js?_v=20221206232750"></script>
 </body>
 
 </html>

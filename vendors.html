@@ -9,7 +9,7 @@
 	<link rel=”preload” as=”font” href=”/fonts/Montserrat-Medium.woff2” type=”font/woff2” crossorigin>
 	<link rel=”preload” as=”font” href=”/fonts/icons.woff2” type=”font/woff2” crossorigin>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221205192443">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221206232750">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2020,7 +2020,7 @@
 					<div class="vendors-main__content">
 						<span>
 							<h2 class="vendors-main__subtitle h">Продавайте товары миллионам наших клиентов</h2>
-							<button type="button" class="vendors-main__btn btn-3">Стать поставщиком</button>
+							<button data-popup="#request" type="button" class="vendors-main__btn btn-3">Стать поставщиком</button>
 						</span>
 						<div class="vendors-main__image-ibg"><picture><source data-srcset="img/vendors/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/vendors/1.png" alt="Изображение"></picture></div>
 					</div>
@@ -2235,17 +2235,30 @@
 		</div>
 	</div>
 
-	<div id="form-electro" aria-hidden="true" class="popup">
+
+	<div id="request" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__text">
-					Ваша заявка принята!
+					<form action="#" data-dev class="popup__form m-txt">
+						<h2 class="popup__form-title h2">Оставьте вашу заявку:</h2>
+						<input data-required autocomplete="off" type="text" name="form[]" placeholder="Название компании *" class="popup__form-input">
+						<input data-required data-phone-pattern autocomplete="off" type="text" name="form[]" placeholder="Телефон *" class="popup__form-input">
+						<input autocomplete="off" type="text" name="form[]" placeholder="E-mail" class="popup__form-input">
+						<input autocomplete="off" type="text" name="form[]" placeholder="Контактное лицо" class="popup__form-input">
+						<input autocomplete="off" type="text" name="form[]" placeholder="Категория товаров" class="popup__form-input">
+						<label class="popup__form-upload form-electro__upload _icon-download upload-file">
+							<span id="upload-text">Прикрепите вашу презентацию</span>
+							<input id="upload" type="file" multiple name="form[]" class="form-electro__upload-input">
+						</label>
+						<button type="submit" class="popup__form-btn btn-3">Отправить</button>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221205192443"></script>
+	<script src="js/app.min.js?_v=20221206232750"></script>
 </body>
 
 </html>

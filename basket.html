@@ -9,7 +9,7 @@
 	<link rel=”preload” as=”font” href=”/fonts/Montserrat-Medium.woff2” type=”font/woff2” crossorigin>
 	<link rel=”preload” as=”font” href=”/fonts/icons.woff2” type=”font/woff2” crossorigin>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20221205192443">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221206232750">
 	<link rel="shortcut icon" href="img/favicon.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2069,15 +2069,36 @@
 									<a href="product.html" class="basket-product__name">Светильник N-212-E27-40W-BK настол. черн. ЭРА Б0035058</a>
 								</div>
 								<span class="basket-product__prices">
-									<div class="basket-product__price"><span>519.60 </span> ₽</div>
-									<div class="basket-product__quantity quantity">
+									<div class="basket-product__price">525.60 ₽</div>
+									<div action="#" class="basket-product__quantity quantity">
 										<button type="button" class="quantity__button quantity__button_minus"></button>
 										<div class="quantity__input">
-											<input data-price="1000" class="quantity__input-f" type="text" name="form[]" value="1">
+											<input id="input" data-price="1000" class="quantity__input-f" type="text" name="form[]" value="1">
 										</div>
 										<button type="button" class="quantity__button quantity__button_plus"></button>
 									</div>
 									<div class="basket-product__summ"><span>519.60 </span> ₽</div>
+								</span>
+								<button type="button" class="basket-product__delete _icon-close card-delete"></button>
+							</li>
+							<li class="basket__item basket-product ">
+								<input class="basket-product__check" type="checkbox">
+								<a href="product.html" class="basket-product__image-ibc"><picture><source data-srcset="img/products/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/products/4.jpg" alt="Изображение товара"></picture></a>
+								<div class="basket-product__info-block">
+									<div class="basket-product__sticker">Лучшая цена</div>
+									<div class="basket-product__number m-txt">код: <span> 15565447</span></div>
+									<a href="product.html" class="basket-product__name">Светильник N-212</a>
+								</div>
+								<span class="basket-product__prices">
+									<div class="basket-product__price">519.60 <span> ₽</span></div>
+									<div class="basket-product__quantity quantity">
+										<button type="button" class="quantity__button quantity__button_minus"></button>
+										<div class="quantity__input">
+											<input data-price="2000" class="quantity__input-f" type="text" name="form[]" value="1">
+										</div>
+										<button type="button" class="quantity__button quantity__button_plus"></button>
+									</div>
+									<div class="basket-product__summ">519.60 <span> ₽</span></div>
 								</span>
 								<button type="button" class="basket-product__delete _icon-close card-delete"></button>
 							</li>
@@ -2113,7 +2134,7 @@
 							<dl class="basket-ordering__info">
 								<div class="basket-ordering__info-item">
 									<dt>Выбрано товаров:</dt>
-									<dd>2 <span> шт</span></dd>
+									<dd><span>2 </span> шт</dd>
 								</div>
 								<div class="basket-ordering__info-item">
 									<dt>Вес заказа:</dt>
@@ -2243,17 +2264,8 @@
 		</div>
 	</div>
 
-	<div id="form-electro" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__text">
-					Ваша заявка принята!
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="js/app.min.js?_v=20221205192443"></script>
+
+	<script src="js/app.min.js?_v=20221206232750"></script>
 </body>
 
 </html>
