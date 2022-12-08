@@ -5419,14 +5419,14 @@
             }
         }
         function ItemDel() {
-            document.querySelectorAll(".card-delete").forEach((btn => {
+            if (document.querySelectorAll(".card-delete")) document.querySelectorAll(".card-delete").forEach((btn => {
                 btn.addEventListener("click", (() => {
                     btn.parentElement.remove();
                 }));
             }));
         }
-        function itemsCheck() {
-            if (document.querySelector(".likes")) document.querySelectorAll(".likes").forEach((btn => {
+        function functions_itemsCheck() {
+            if (document.querySelector(".likes2")) document.querySelectorAll(".likes2").forEach((btn => {
                 btn.addEventListener("click", (() => {
                     btn.classList.toggle("liked");
                 }));
@@ -10832,7 +10832,9 @@
                         spaceBetween: 30
                     }
                 },
-                on: {}
+                on: {
+                    afterInit: itemsCheck()
+                }
             });
             if (document.querySelector(".category-sl__category-sl")) new core(".category-sl__category-sl", {
                 modules: [ Navigation, Lazy, Autoplay ],
@@ -11019,6 +11021,18 @@
         }
         window.addEventListener("load", (function(e) {
             initSliders();
+            function favoriteSliderAdd() {
+                if (document.querySelector(".swiper")) document.querySelectorAll(".swiper").forEach((slider => {
+                    const btns = slider.getElementsByClassName("likes");
+                    for (let i = 0; i < btns.length; i++) {
+                        const btn = btns[i];
+                        btn.addEventListener("click", (() => {
+                            btn.classList.toggle("liked");
+                        }));
+                    }
+                }));
+            }
+            favoriteSliderAdd();
         }));
         __webpack_require__(2352);
         __webpack_require__(3542);
@@ -12387,29 +12401,50 @@
             }));
         }
         itemsCompare();
-        function MyPrice() {
-            if (document.querySelector(".basket-product")) document.querySelectorAll(".basket-product").forEach((item => {
-                let price = parseFloat(item.querySelector(".basket-product__price").innerHTML);
-                var value = parseInt(item.querySelector(".quantity__input-f").value);
-                item.querySelector(".basket-product__summ").textContent = price.toFixed(2) + " ₽";
-                item.addEventListener("click", (function(e) {
-                    let targetElement = e.target;
-                    if (targetElement.closest(".quantity__button")) {
-                        if (targetElement.classList.contains("quantity__button_plus")) value++; else {
-                            --value;
-                            if (value < 1) value = 1;
-                        }
-                        targetElement.closest(".quantity").querySelector("input").value = value;
-                        item.querySelector(".basket-product__summ").textContent = (value * price).toFixed(2) + " ₽";
-                    }
-                }));
-                item.querySelector(".quantity__input-f").addEventListener("change", (() => {
+        function BasketCalculate() {
+            if (document.querySelector(".basket-product")) {
+                document.querySelectorAll(".basket-product").forEach((item => {
+                    let price = parseFloat(item.querySelector(".basket-product__price").innerHTML);
                     let value = parseInt(item.querySelector(".quantity__input-f").value);
-                    item.querySelector(".basket-product__summ").textContent = (value * price).toFixed(2) + " ₽";
+                    const summ = price.toFixed(2) + " ₽";
+                    item.querySelector(".basket-product__summ").textContent = summ;
+                    item.addEventListener("click", (function(e) {
+                        let targetElement = e.target;
+                        if (targetElement.closest(".quantity__button")) {
+                            if (targetElement.classList.contains("quantity__button_plus")) value++; else {
+                                --value;
+                                if (value < 1) value = 1;
+                            }
+                            targetElement.closest(".quantity").querySelector("input").value = value;
+                            item.querySelector(".basket-product__summ").textContent = (value * price).toFixed(2) + " ₽";
+                        }
+                    }));
+                    item.querySelector(".quantity__input-f").addEventListener("change", (() => {
+                        let value = parseInt(item.querySelector(".quantity__input-f").value);
+                        item.querySelector(".basket-product__summ").textContent = (value * price).toFixed(2) + " ₽";
+                        totalCounts();
+                    }));
                 }));
-            }));
+                function totalCounts() {
+                    function totalSumm() {
+                        let totalprice = 0;
+                        document.querySelectorAll(".basket-product__summ").forEach((element => {
+                            const sumone = parseFloat(element.textContent);
+                            totalprice += sumone;
+                        }));
+                        document.querySelector(".basket-ordering__fullprice").innerHTML = totalprice.toFixed(2);
+                    }
+                    totalSumm();
+                    document.querySelector(".basket-ordering__info-item > dd > span").innerHTML = document.querySelectorAll(".basket-product").length;
+                    document.querySelector(".basket__card-list").addEventListener("click", (() => {
+                        document.querySelector(".basket-ordering__info-item > dd > span").innerHTML = document.querySelectorAll(".basket-product").length;
+                        totalSumm();
+                    }));
+                }
+                totalCounts();
+            }
         }
-        MyPrice();
+        BasketCalculate();
         window["FLS"] = true;
         isWebp();
         addTouchClass();
@@ -12424,7 +12459,7 @@
         functions_fileUpload();
         CheckDelAll();
         ItemDel();
-        itemsCheck();
+        functions_itemsCheck();
         formFieldsInit({
             viewPass: false
         });
